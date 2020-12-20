@@ -190,6 +190,9 @@ $spacers: map-merge(
     17: (
       $spacer * 4.25,
     ),
+    18: (
+      $spacer * 4.5,
+    ),
   ),
   $spacers
 );
@@ -393,7 +396,8 @@ $blockquote-small-color: $gray-600 !default;
 $blockquote-small-font-size: $small-font-size !default;
 $blockquote-font-size: $font-size-base * 1.25 !default;
 
-$hr-border-color: rgba($black, 0.1) !default;
+// $hr-border-color: rgba($black, 0.1) !default;
+$hr-border-color: $white !default;
 $hr-border-width: $border-width !default;
 
 $mark-padding: 0.2em !default;
@@ -528,7 +532,8 @@ $input-padding-x-sm: $input-btn-padding-x-sm !default;
 $input-font-size-sm: $input-btn-font-size-sm !default;
 $input-line-height-sm: $input-btn-line-height-sm !default;
 
-$input-padding-y-lg: $input-btn-padding-y-lg !default;
+// $input-padding-y-lg: $input-btn-padding-y-lg !default;
+$input-padding-y-lg: 0.6rem !default;
 $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
 $input-line-height-lg: $input-btn-line-height-lg !default;
