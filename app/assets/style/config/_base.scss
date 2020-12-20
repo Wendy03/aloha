@@ -45,8 +45,8 @@ body {
     background-position: center center;
   }
   &-rounded {
-    &-l{
-      @include media-breakpoint-up(md){
+    &-l {
+      @include media-breakpoint-up(md) {
         border-radius: 8px 0px 0px 8px;
       }
     }
@@ -55,4 +55,12 @@ body {
 
 .card-img-top {
   border-radius: 8px;
+}
+
+.hover {
+  &-underline {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
 }
