@@ -1,0 +1,1021 @@
+---
+title: Detail
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+navbarDisplay: d-block
+footerDisplay: d-block
+---
+
+<div class="bg-light">
+  <div class="container py-4 py-md-5">
+    <div class="d-flex d-md-none align-items-center">
+      <a href="result.html" class="text-dark"
+        ><span class="material-icons mr-3 d-md-none">arrow_back</span></a
+      >
+      <p class="font-size-ss mb-0 text-dark">
+        Bangkok・17 June - 19 June・2 adults・1 room
+      </p>
+    </div>
+    <form action="" class="d-none d-md-inline">
+      <div class="form-row align-items-center">
+        <div class="form-group mr-md-4 search__item-bg flex-md-grow-1 mb-1">
+          <div class="dropdown">
+            <button
+              class="btn btn-block text-left py-md-3"
+              type="button"
+              id="dropdownDestination"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-none d-md-flex align-items-center">
+                <span class="material-icons mr-3 d-none d-md-block">
+                  location_on
+                </span>
+                <div class="d-flex flex-column justify-content-center">
+                  <p class="font-size-ss line-height-sm font-weight-bold mb-0">
+                    Destination
+                  </p>
+                  <p class="font-size-sm text-dark mb-0">Bangkok, Thailand</p>
+                </div>
+              </div>
+              <p class="d-md-none font-size-ss mb-0 text-dark">Bangkok</p>
+            </button>
+            <ul
+              class="dropdown-menu w-100"
+              aria-labelledby="dropdownDestination"
+            >
+              <li class="dropdown-item d-flex justify-content-start pl-2">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Osaka, JAPAN</p>
+              </li>
+              <li class="dropdown-item d-flex justify-content-start pl-2">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Kyoto, JAPAN</p>
+              </li>
+              <li class="dropdown-item d-flex justify-content-start pl-2">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Reykjavík, ICELAND</p>
+              </li>
+              <li class="dropdown-item d-flex justify-content-start pl-2">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Paris, FRANCE</p>
+              </li>
+              <li class="dropdown-item d-flex justify-content-start pl-2">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Roma, Italy</p>
+              </li>
+              <li class="dropdown-item d-flex justify-content-start pl-2">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Bangkok, Thailand</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-group mr-md-4 search__item-bg flex-md-grow-1 mb-1">
+          <div class="dropdown">
+            <button
+              class="btn btn-block text-left py-md-3"
+              type="button"
+              id="dropdownDate"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <span class="material-icons mr-3 d-none d-md-block">
+                  date_range
+                </span>
+                <ul class="d-lg-flex list-unstyled d-none w-100 mb-0">
+                  <li class="w-50">
+                    <p
+                      class="font-size-ss line-height-sm mb-0 font-weight-bold"
+                    >
+                      Check-in
+                    </p>
+                    <p class="font-size-sm text-dark mb-0">17 June</p>
+                  </li>
+                  <li class="w-50">
+                    <p
+                      class="font-size-ss line-height-sm mb-0 font-weight-bold d-none d-lg-block"
+                    >
+                      Check-out
+                    </p>
+                    <p class="font-size-sm text-dark mb-0">19 June</p>
+                  </li>
+                </ul>
+                <div class="d-md-flex flex-md-column">
+                  <p
+                    class="font-size-ss line-height-sm-md mb-0 font-weight-bold d-none d-md-block d-lg-none"
+                  >
+                    Check-in / out
+                  </p>
+                  <p class="font-size-sm text-dark mb-0 d-lg-none">
+                    17 June - 19 June
+                  </p>
+                </div>
+              </div>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownDate"></div>
+          </div>
+        </div>
+        <div class="form-group search__item-bg flex-md-grow-1 mr-md-4 mb-1">
+          <div class="dropdown">
+            <button
+              class="btn btn-block text-left py-md-3"
+              type="button"
+              id="dropdownPerson"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="d-flex align-items-center">
+                <span class="material-icons mr-3 d-none d-md-block">
+                  person
+                </span>
+                <div class="d-flex flex-column">
+                  <p
+                    class="font-size-ss line-height-sm mb-0 font-weight-bold d-none d-md-block"
+                  >
+                    Guests
+                  </p>
+                  <p class="font-size-sm text-dark mb-0">2 adults・1 room</p>
+                </div>
+              </div>
+            </button>
+            <ul class="dropdown-menu w-100" aria-labelledby="dropdownPerson">
+              <li
+                class="dropdown-item d-flex justify-content-between align-items-center px-3"
+              >
+                <p class="mb-0 mr-1">Adult</p>
+                <div class="input-group input-group-sm">
+                  <div class="input-group-prepend">
+                    <button
+                      class="btn btn-sm btn-outline-dark border-0 py-0"
+                      type="button"
+                      id="button-addon1"
+                    >
+                      <span class="material-icons"> remove </span>
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control border-0 text-center my-auto shadow-none"
+                    placeholder=""
+                    aria-label="Example text with button addon"
+                    aria-describedby="button-addon1"
+                    value="2"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-sm btn-outline-dark border-0 py-0"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="dropdown-item d-flex justify-content-between align-items-center px-3"
+              >
+                <p class="mb-0 mr-1">Child</p>
+                <div class="input-group input-group-sm">
+                  <div class="input-group-prepend">
+                    <button
+                      class="btn btn-sm btn-outline-dark border-0 py-0"
+                      type="button"
+                      id="button-addon1"
+                    >
+                      <span class="material-icons"> remove </span>
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control border-0 text-center my-auto shadow-none"
+                    placeholder=""
+                    aria-label="Example text with button addon"
+                    aria-describedby="button-addon1"
+                    value="0"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-sm btn-outline-dark border-0 py-0"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="dropdown-item d-flex justify-content-between align-items-center px-3"
+              >
+                <p class="mb-0 mr-1">Room</p>
+                <div class="input-group input-group-sm">
+                  <div class="input-group-prepend">
+                    <button
+                      class="btn btn-sm btn-outline-dark border-0 py-0"
+                      type="button"
+                      id="button-addon1"
+                    >
+                      <span class="material-icons"> remove </span>
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control border-0 text-center my-auto shadow-none"
+                    placeholder=""
+                    aria-label="Example text with button addon"
+                    aria-describedby="button-addon1"
+                    value="1"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-sm btn-outline-dark border-0 py-0"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="d-none d-md-block btn btn-primary py-4 flex-md-grow-1"
+        >
+          SEARCH
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container mt-5 d-none d-md-block">
+  <div class="row no-gutters">
+    <div class="col-md-7">
+      <img
+        src="./assets/images/Rachada1.jpg"
+        alt="Rachada1"
+        class="w-100 roomDetail__img-lg img-cover img-rounded"
+      />
+    </div>
+    <div class="col-md ml-2">
+      <div class="d-flex flex-column">
+        <img
+          src="./assets/images/Rachada2.jpg"
+          alt="Rachada2"
+          class="w-100 roomDetail__img-md mb-2 img-cover img-rounded"
+        />
+        <div class="d-flex">
+          <img
+            src="./assets/images/Rachada3.jpg"
+            alt="Rachada3"
+            class="w-50 roomDetail__img-md mr-2 img-cover img-rounded"
+          />
+          <div>
+            <img
+              src="./assets/images/Rachada4.jpg"
+              alt=""
+              class="w-100 roomDetail__img-sm mb-2 img-cover img-rounded"
+            />
+            <div>
+              <button
+                class="btn bg-black text-white btn-block py-2 py-lg-3 font-size-ss-md h6-lg"
+              >
+                SEE ALL 10 PHOTOS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  id="carouselControls"
+  class="carousel slide d-md-none mb-3 mb-md-0"
+  data-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="./assets/images/Rachada1.jpg"
+        class="img-cover w-100 roomDetail__img-carousel"
+        alt="roomPhoto"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="./assets/images/Rachada2.jpg"
+        class="img-cover w-100 roomDetail__img-carousel"
+        alt="roomPhoto"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="./assets/images/Rachada3.jpg"
+        class="img-cover w-100 roomDetail__img-carousel"
+        alt="roomPhoto"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="./assets/images/Rachada4.jpg"
+        class="img-cover w-100 roomDetail__img-carousel"
+        alt="roomPhoto"
+      />
+    </div>
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselControls"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="material-icons" aria-hidden="true"> arrow_back_ios </span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselControls"
+    role="button"
+    data-slide="next"
+  >
+    <span class="material-icons" aria-hidden="true"> arrow_forward_ios </span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="container mt-0 mt-md-5">
+  <div class="row">
+    <div class="col-lg-7">
+      <div
+        class="d-flex flex-column flex-md-row align-items-md-center mb-2 mb-md-0"
+      >
+        <h2 class="mb-2 mb-md-0 title mr-md-4">Rachada Hotel</h2>
+        <div class="d-flex align-items-center">
+          <span class="material-icons">star</span>
+          <span class="material-icons">star</span>
+          <span class="material-icons">star</span>
+          <span class="material-icons">star</span>
+          <span class="font-size-sm text-dark">4.0 (283)</span>
+        </div>
+      </div>
+      <p class="text-primary font-size-sm">
+        318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand
+      </p>
+      <p class="mt-4 mt-md-5 font-size-sm text-dark">
+        The Rachada Hotel is an establishment that provides paid lodging on a
+        short-term basis. Facilities provided may range from a modest-quality
+        mattress in a small room to large suites with bigger, higher-quality
+        beds, a dresser, a refrigerator and other kitchen facilities,
+        upholstered chairs, a flat screen television, and en-suite bathrooms.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container mt-12">
+  <h2 class="title mb-4 mb-lg-5">Select your room</h2>
+  <span
+    class="badge badge-light font-size-sm text-dark font-weight-normal py-2 px-4 d-none d-md-inline"
+    >Bangkok, Thailand</span
+  >
+  <span
+    class="badge badge-light font-size-sm text-dark font-weight-normal py-2 px-4 d-none d-md-inline"
+    >17 June - 19 June・2 nights</span
+  >
+  <span
+    class="badge badge-light font-size-sm text-dark font-weight-normal py-2 px-4 mr-4 d-none d-md-inline"
+    >2 adults・1 room</span
+  >
+  <button
+    type="button"
+    class="btn btn-link p-0 font-weight-bold d-none d-md-inline"
+  >
+    EDIT DETAIL
+  </button>
+</div>
+<div class="container mt-4 mt-md-10">
+  <ul class="row list-unstyled">
+    <li class="col-md-6 font-weight-bold">ROOM TYPE</li>
+    <li class="col-md-2 font-weight-bold d-none d-md-block text-center">
+      SLEEPS
+    </li>
+    <li class="col-md-2 font-weight-bold d-none d-md-block text-center">
+      PRICE
+    </li>
+    <li class="col-md-2 font-weight-bold d-none d-md-block text-center">
+      ROOMS
+    </li>
+  </ul>
+  <ul class="list-unstyled">
+    <li>
+      <ul class="row no-gutters list-unstyled align-items-center">
+        <li class="col-md-6">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div
+                class="col-6 bg-center mr-2 mr-lg-0 img-rounded-l"
+                style="
+                  background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/roomA.jpg');
+                "
+              ></div>
+              <div class="col">
+                <div
+                  class="card-body d-flex flex-column flex-md-row justify-content-md-between px-1"
+                >
+                  <div class="d-flex flex-column">
+                    <h4 class="card-title h6 font-weight-bold mb-0">
+                      Deluxe Double Room A
+                    </h4>
+                    <small class="mb-2 mb-lg-4 text-dark"
+                      >1 bed (Queen size)</small
+                    >
+                    <ul
+                      class="list-unstyled d-flex flex-wrap flex-row flex-lg-column mb-2 mblg-0"
+                      style="max-height: 100px; max-width: 162px"
+                    >
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >wifi</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Wi-Fi</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >restaurant</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Breakfast</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >personal_video</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Television</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span class="material-icons font-size-sm text-dark"
+                          >ac_unit</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Air conditioner</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >room_service</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Room service</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >smoke_free</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Smoke free</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="d-flex d-md-none mb-3">
+                      <span class="material-icons">person</span>
+                      <span class="material-icons">person</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex d-md-none align-items-center bg-light">
+              <div class="input-group input-group-sm w-50">
+                <div class="input-group-prepend d-md-none">
+                  <button
+                    class="btn btn-sm btn-outline-dark border-0 py-2"
+                    type="button"
+                    id="button-addon1"
+                  >
+                    <span class="material-icons"> remove </span>
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control form-control-sm border-0 text-center my-auto shadow-none bg-light"
+                  placeholder=""
+                  aria-label="Example text with button addon"
+                  aria-describedby="button-addon1"
+                  value="0"
+                  min="1"
+                  max="4"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-sm btn-outline-dark border-0 py-2"
+                    type="button"
+                    id="button-addon2"
+                  >
+                    <span class="material-icons"> add </span>
+                  </button>
+                </div>
+              </div>
+              <div class="w-50 text-right">
+                <p class="mb-0 font-size-sm text-dark mr-2">
+                  <del>TWD 1,600</del>
+                </p>
+                <p class="mb-0 font-weight-bold">
+                  TWD <span class="text-primary mr-2">1,490</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-2 d-none d-md-block text-center">
+          <span class="material-icons">person</span>
+          <span class="material-icons">person</span>
+        </li>
+        <li class="col-md-2 d-none d-md-block text-center">
+          <p class="mb-0 font-size-sm text-dark"><del>TWD 1,600</del></p>
+          <p class="mb-0 font-weight-bold mb-0">
+            TWD <span class="text-primary">1,490</span>
+          </p>
+          <small class="text-dark">per night</small>
+        </li>
+        <li class="col-md-2 d-none d-md-block text-center">
+          <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+              <button
+                class="btn btn-sm btn-outline-dark border-0 p-0"
+                type="button"
+                id="button-addon1"
+              >
+                <span class="material-icons"> remove </span>
+              </button>
+            </div>
+            <input
+              type="number"
+              class="form-control form-control-sm border-0 text-center my-auto shadow-none"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+              value="0"
+              min="1"
+              max="4"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-sm btn-outline-dark border-0 p-0"
+                type="button"
+                id="button-addon2"
+              >
+                <span class="material-icons"> add </span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <ul class="row no-gutters list-unstyled align-items-center">
+        <li class="col-md-6">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div
+                class="col-6 bg-center mr-2 mr-lg-0 img-rounded-l"
+                style="
+                  background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/roomB.jpg');
+                "
+              ></div>
+              <div class="col">
+                <div
+                  class="card-body d-flex flex-column flex-md-row justify-content-md-between px-1"
+                >
+                  <div class="d-flex flex-column">
+                    <h4
+                      class="card-title h6 font-weight-bold mb-0 align-middle"
+                    >
+                      Deluxe Double Room B
+                    </h4>
+                    <small class="mb-2 mb-lg-4 text-dark"
+                      >1 bed (Queen size)</small
+                    >
+                    <ul
+                      class="list-unstyled d-flex flex-wrap flex-row flex-lg-column align mb-2 mb-lg-0"
+                      style="max-height: 100px; max-width: 162px"
+                    >
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >wifi</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Wi-Fi</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >restaurant</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Breakfast</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >personal_video</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Television</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >ac_unit</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Air conditioner</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >room_service</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Room service</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >smoke_free</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Smoke free</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="d-flex d-md-none mb-3">
+                      <span class="material-icons">person</span>
+                      <span class="material-icons">person</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex d-md-none bg-light align-items-center">
+              <div class="input-group input-group-sm w-50">
+                <div class="input-group-prepend d-md-none">
+                  <button
+                    class="btn btn-sm btn-outline-dark border-0 py-2"
+                    type="button"
+                    id="button-addon1"
+                  >
+                    <span class="material-icons"> remove </span>
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control form-control-sm border-0 text-center my-auto shadow-none bg-light"
+                  placeholder=""
+                  aria-label="Example text with button addon"
+                  aria-describedby="button-addon1"
+                  value="0"
+                  min="1"
+                  max="4"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-sm btn-outline-dark border-0 py-2"
+                    type="button"
+                    id="button-addon2"
+                  >
+                    <span class="material-icons"> add </span>
+                  </button>
+                </div>
+              </div>
+              <div class="w-50 text-right">
+                <p class="mb-0 font-weight-bold mr-2">TWD 1,600</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-2 d-none d-md-block text-center">
+          <span class="material-icons">person</span>
+          <span class="material-icons">person</span>
+        </li>
+        <li class="col-md-2 d-none d-md-block text-center">
+          <p class="mb-0 font-weight-bold mb-0">TWD 1,600</p>
+          <small class="text-dark">per night</small>
+        </li>
+        <li class="col-md-2 d-none d-md-block text-center">
+          <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+              <button
+                class="btn btn-sm btn-outline-dark border-0 p-0"
+                type="button"
+                id="button-addon1"
+              >
+                <span class="material-icons"> remove </span>
+              </button>
+            </div>
+            <input
+              type="number"
+              class="form-control form-control-sm border-0 text-center my-auto shadow-none"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+              value="0"
+              min="1"
+              max="4"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-sm btn-outline-dark border-0 p-0"
+                type="button"
+                id="button-addon2"
+              >
+                <span class="material-icons"> add </span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <ul class="row no-gutters list-unstyled align-items-center">
+        <li class="col-md-6">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div
+                class="col-6 bg-center mr-2 mr-lg-0 img-rounded-l"
+                style="
+                  background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Rachada1.jpg');
+                "
+              ></div>
+              <div class="col">
+                <div
+                  class="card-body d-flex flex-column flex-md-row justify-content-md-between px-1"
+                >
+                  <div class="d-flex flex-column">
+                    <h4 class="card-title h6 font-weight-bold mb-0">
+                      Deluxe Suite with Pool
+                    </h4>
+                    <small class="mb-2 mb-lg-4 text-dark"
+                      >1 bed (Queen size)</small
+                    >
+                    <ul
+                      class="list-unstyled d-flex flex-wrap flex-row flex-lg-column mb-2 mb-lg-0"
+                      style="max-height: 100px; max-width: 162px"
+                    >
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >wifi</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Wi-Fi</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >restaurant</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Breakfast</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >personal_video</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Television</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >ac_unit</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Air conditioner</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >kitchen</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Refrigerator</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >room_service</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Room service</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >local_bar</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Mini Bar</span
+                        >
+                      </li>
+                      <li class="mr-2">
+                        <span
+                          class="material-icons font-size-sm text-dark align-middle"
+                          >smoke_free</span
+                        >
+                        <span class="d-none d-lg-inline font-size-sm text-dark"
+                          >Smoke free</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="d-flex d-md-none mb-3">
+                      <span class="material-icons">person</span>
+                      <span class="material-icons">person</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex d-md-none align-items-center bg-light">
+              <div class="input-group input-group-sm w-50">
+                <div class="input-group-prepend d-md-none">
+                  <button
+                    class="btn btn-sm btn-outline-dark border-0 py-2"
+                    type="button"
+                    id="button-addon1"
+                    data-toggle="modal"
+                    data-target="#bookingModal"
+                  >
+                    <span class="material-icons"> remove </span>
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control form-control-sm border-0 text-center my-auto shadow-none bg-light"
+                  placeholder=""
+                  aria-label="Example text with button addon"
+                  aria-describedby="button-addon1"
+                  value="1"
+                  min="1"
+                  max="4"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-sm btn-outline-dark border-0 py-2"
+                    type="button"
+                    id="button-addon2"
+                    data-toggle="modal"
+                    data-target="#bookingModal"
+                  >
+                    <span class="material-icons"> add </span>
+                  </button>
+                </div>
+              </div>
+              <div class="w-50 text-right">
+                <p class="mb-0 font-weight-bold mr-2">TWD 1,980</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-2 d-none d-md-block text-center">
+          <span class="material-icons">person</span>
+          <span class="material-icons">person</span>
+        </li>
+        <li class="col-md-2 d-none d-md-block text-center">
+          <p class="mb-0 font-weight-bold mb-0">TWD 1,980</p>
+          <small class="text-dark">per night</small>
+        </li>
+        <li class="col-md-2 d-none d-md-block text-center">
+          <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+              <button
+                class="btn btn-sm btn-outline-dark border-0 p-0"
+                type="button"
+                id="button-addon1"
+                data-toggle="modal"
+                data-target="#bookingModal"
+              >
+                <span class="material-icons"> remove </span>
+              </button>
+            </div>
+            <input
+              type="number"
+              class="form-control form-control-sm border-0 text-center my-auto shadow-none"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+              value="1"
+              min="1"
+              max="4"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-sm btn-outline-dark border-0 p-0"
+                type="button"
+                id="button-addon2"
+                data-toggle="modal"
+                data-target="#bookingModal"
+              >
+                <span class="material-icons"> add </span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="jumbotron jumbotron-fluid py-5 py-lg-8 mb-0 mt-12 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 col-lg-5">
+        <h2 class="title h4 h2-lg font-weight-bold">
+          Subscribe for Exclusive Offer
+        </h2>
+      </div>
+      <div class="col-md-8 col-lg-7 input-group mb-3">
+        <input
+          type="email"
+          class="form-control border-primary subscribeEmail"
+          placeholder="Your email address"
+          aria-label="Your email address"
+          aria-describedby="basic-addon2"
+        />
+        <div class="input-group-append">
+          <span
+            class="input-group-text bg-primary text-white border-primary"
+            id="basic-addon2"
+            >Subscribe</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="bookingModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog vertical-align-center" role="document">
+    <div class="modal-content bg-dark py-5 px-md-16 px-4">
+      <div class="modal-body p-0">
+        <div class="d-flex flex-column flex-md-row justify-content-md-between">
+          <div class="d-flex flex-column">
+            <p class="text-white mb-0 font-size-ss text-right text-md-left">
+              1 room・2 night
+            </p>
+            <p class="text-white h4 title text-right text-md-left">TWD 3,960</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <button
+              type="button"
+              class="btn btn-secondary border-white w-50 mr-2 px-8 py-4"
+              data-dismiss="modal"
+            >
+              CANCEL
+            </button>
+            <a href="reserve.html" class="btn btn-primary w-50 px-8 py-4">
+              RESERVE
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
