@@ -1,6 +1,656 @@
 ---
-title: 首頁
+title: ALOHA
 layout: ./app/layout.ejs
 engine: ejs
 current: index
+navbarDisplay: d-block
+footerDisplay: d-block
 ---
+
+<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div
+      class="carousel-item bg-center active"
+      data-interval="10000"
+      style="
+        background-image: url('./assets/images/index-banner.jpg');
+        height: 320px;
+      "
+    >
+      <div class="carousel-caption">
+        <h2 class="h1 title">Discover your ideal hotel</h2>
+      </div>
+    </div>
+    <div
+      class="carousel-item bg-center"
+      data-interval="2000"
+      style="
+        background-image: url('./assets/images/index-banner.jpg');
+        height: 320px;
+      "
+    >
+      <div
+        class="carousel-caption d-flex justify-content-center align-items-center"
+      >
+        <h2 class="h1 title">Discover your ideal hotel</h2>
+      </div>
+    </div>
+    <div
+      class="carousel-item bg-center"
+      style="
+        background-image: url('./assets/images/index-banner.jpg');
+        height: 320px;
+      "
+    >
+      <div
+        class="carousel-caption d-flex justify-content-center align-items-center"
+      >
+        <h2 class="h1 title">Discover your ideal hotel</h2>
+      </div>
+    </div>
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#bannerCarousel"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#bannerCarousel"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="container search mb-lg-6">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card bg-light rounded">
+        <div class="card-body p-5">
+          <form action="">
+            <div class="form-row flex-column flex-lg-row">
+              <div class="form-group mb-2 mb-lg-0 mr-1 bg-white flex-lg-grow-1">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-block text-left py-4"
+                    type="button"
+                    id="dropdownDestination"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <span class="material-icons mr-3"> location_on </span>
+                    Destination
+                  </button>
+                  <ul
+                    class="dropdown-menu w-100"
+                    aria-labelledby="dropdownDestination"
+                  >
+                    <li class="dropdown-item d-flex justify-content-start pl-2">
+                      <span class="material-icons mr-1"> star </span>
+                      <p class="mb-0">Osaka, JAPAN</p>
+                    </li>
+                    <li class="dropdown-item d-flex justify-content-start pl-2">
+                      <span class="material-icons mr-1"> star </span>
+                      <p class="mb-0">Kyoto, JAPAN</p>
+                    </li>
+                    <li class="dropdown-item d-flex justify-content-start pl-2">
+                      <span class="material-icons mr-1"> star </span>
+                      <p class="mb-0">Reykjavík, ICELAND</p>
+                    </li>
+                    <li class="dropdown-item d-flex justify-content-start pl-2">
+                      <span class="material-icons mr-1"> star </span>
+                      <p class="mb-0">Paris, FRANCE</p>
+                    </li>
+                    <li class="dropdown-item d-flex justify-content-start pl-2">
+                      <span class="material-icons mr-1"> star </span>
+                      <p class="mb-0">Roma, Italy</p>
+                    </li>
+                    <li class="dropdown-item d-flex justify-content-start pl-2">
+                      <span class="material-icons mr-1"> star </span>
+                      <p class="mb-0">Bangkok, Thailand</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group mb-2 mb-lg-0 mr-1 bg-white">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-block text-left py-4 pr-lg-4"
+                    type="button"
+                    id="dropdownDate"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <span class="material-icons mr-3"> date_range </span>
+                    Check-in / Check-out
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownDate"
+                  ></div>
+                </div>
+              </div>
+              <div class="form-group mb-2 mb-lg-0 mr-1 bg-white flex-lg-grow-1">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-block text-left py-4"
+                    type="button"
+                    id="dropdownPerson"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <span class="material-icons mr-3"> person </span>
+                    Guests
+                  </button>
+                  <ul
+                    class="dropdown-menu w-100"
+                    aria-labelledby="dropdownPerson"
+                  >
+                    <li
+                      class="dropdown-item d-flex justify-content-between align-items-center px-3"
+                    >
+                      <p class="mb-0 mr-1">Adult</p>
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                          <button
+                            class="btn btn-sm btn-outline-dark border-0 py-0"
+                            type="button"
+                            id="button-addon1"
+                          >
+                            <span class="material-icons"> remove </span>
+                          </button>
+                        </div>
+                        <input
+                          type="text"
+                          class="form-control border-0 text-center my-auto shadow-none"
+                          placeholder=""
+                          aria-label="Example text with button addon"
+                          aria-describedby="button-addon1"
+                          value="2"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-sm btn-outline-dark border-0 py-0"
+                            type="button"
+                            id="button-addon2"
+                          >
+                            <span class="material-icons"> add </span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="dropdown-item d-flex justify-content-between align-items-center px-3"
+                    >
+                      <p class="mb-0 mr-1">Child</p>
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                          <button
+                            class="btn btn-sm btn-outline-dark border-0 py-0"
+                            type="button"
+                            id="button-addon1"
+                          >
+                            <span class="material-icons"> remove </span>
+                          </button>
+                        </div>
+                        <input
+                          type="text"
+                          class="form-control border-0 text-center my-auto shadow-none"
+                          placeholder=""
+                          aria-label="Example text with button addon"
+                          aria-describedby="button-addon1"
+                          value="0"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-sm btn-outline-dark border-0 py-0"
+                            type="button"
+                            id="button-addon2"
+                          >
+                            <span class="material-icons"> add </span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="dropdown-item d-flex justify-content-between align-items-center px-3"
+                    >
+                      <p class="mb-0 mr-1">Room</p>
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                          <button
+                            class="btn btn-sm btn-outline-dark border-0 py-0"
+                            type="button"
+                            id="button-addon1"
+                          >
+                            <span class="material-icons"> remove </span>
+                          </button>
+                        </div>
+                        <input
+                          type="text"
+                          class="form-control border-0 text-center my-auto shadow-none"
+                          placeholder=""
+                          aria-label="Example text with button addon"
+                          aria-describedby="button-addon1"
+                          value="1"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-sm btn-outline-dark border-0 py-0"
+                            type="button"
+                            id="button-addon2"
+                          >
+                            <span class="material-icons"> add </span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a href="result.html" class="btn btn-primary col-lg-2 py-4">
+                SEARCH
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-lg-14 mt-12 mb-lg-12">
+  <h2 class="title mb-5">Top Choices</h2>
+  <ul class="nav nav-tabs mb-7" id="myTab" role="tablist">
+    <li class="nav-item nav-item--active">
+      <a
+        class="nav-link nav-link h5 h4-md"
+        id="bali-tab"
+        data-toggle="tab"
+        href="#bali"
+        role="tab"
+        aria-controls="bali"
+        aria-selected="true"
+        >Bali<sup>128</sup></a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link h5 h4-md text-dark"
+        id="okinawa-tab"
+        data-toggle="tab"
+        href="#okinawa"
+        role="tab"
+        aria-controls="okinawa"
+        aria-selected="false"
+        >Okinawa<sup>67</sup></a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link h5 h4-md text-dark"
+        id="taipei-tab"
+        data-toggle="tab"
+        href="#taipei"
+        role="tab"
+        aria-controls="taipei"
+        aria-selected="false"
+        >Taipei<sup>53</sup></a
+      >
+    </li>
+  </ul>
+  <div class="tab-content mt-4" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="bali"
+      role="tabpanel"
+      aria-labelledby="bali-tab"
+    >
+      <div class="position-relative">
+        <div class="swiper-container swiper-top">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  src="./assets/images/top1.jpg"
+                  class="card-img-top bg-cover top__img rounded"
+                  alt="top1"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6 mb-2">Hotel Aqua</h3>
+                  <div class="d-flex align-items-center mb-2 text-nowrap">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="font-size-sm">5.0</span>
+                    <small class="text-muted">・2k reviews</small>
+                  </div>
+                  <p class="card-text font-size-sm text-dark">
+                    TWD 2,480
+                    <del class="font-size-ss text-muted">TWD 3,980</del>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  src="./assets/images/top2.jpg"
+                  class="card-img-top bg-cover top__img rounded"
+                  alt="top2"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6 mb-2">Mr. Kawasaki Inn</h3>
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="font-size-sm">4.0</span>
+                    <small class="text-muted">・500 reviews</small>
+                  </div>
+                  <p class="card-text font-size-sm text-dark">TWD 3,380</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card border-0">
+                <img
+                  src="./assets/images/top3.jpg"
+                  class="card-img-top bg-cover top__img rounded"
+                  alt="top3"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6 mb-2">Weekly Paradise</h3>
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="font-size-sm">4.0</span>
+                    <small class="text-muted">・470 reviews</small>
+                  </div>
+                  <p class="card-text font-size-sm text-dark">TWD 4,780</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  src="./assets/images/top4.jpg"
+                  class="card-img-top bg-cover top__img rounded"
+                  alt="top4"
+                />
+                <div class="card-body">
+                  <h3 class="card-title h6 mb-2">Beast Hotel</h3>
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="font-size-sm">4.0</span>
+                    <small class="text-muted">・283 reviews</small>
+                  </div>
+                  <p class="card-text font-size-sm text-dark">TWD 1,980</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next d-none d-md-block"></div>
+        <div class="swiper-button-prev d-none"></div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="okinawa"
+      role="tabpanel"
+      aria-labelledby="okinawa-tab"
+    >
+      Okinawa
+    </div>
+    <div
+      class="tab-pane fade"
+      id="taipei"
+      role="tabpanel"
+      aria-labelledby="taipei-tab"
+    >
+      Taipei
+    </div>
+  </div>
+</div>
+<div class="container mt-12 mb-lg-12">
+  <h2 class="title mb-5">Popular Destinations</h2>
+  <ul class="row my-4 list-unstyled">
+    <li class="col-lg-4 col-md-6 mb-3">
+      <a href="#">
+        <div class="card text-white positon-relative bg-gradient">
+          <div
+            style="
+              background-image: url('./assets/images/Osaka.jpg');
+              height: 78px;
+            "
+            class="bg-center"
+          ></div>
+          <div
+            class="card-img-overlay d-flex align-items-center justify-content-between"
+          >
+            <div>
+              <p class="card-text font-size-ss mb-0">JAPAN</p>
+              <h3 class="card-title h4 mb-0">Osaka</h3>
+            </div>
+            <span class="material-icons"> keyboard_arrow_down </span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="col-lg-4 col-md-6 mb-3">
+      <a href="#">
+        <div class="card text-white positon-relative bg-gradient">
+          <div
+            style="
+              background-image: url('./assets/images/Kyoto.jpg');
+              height: 78px;
+            "
+            class="bg-center"
+          ></div>
+          <div
+            class="card-img-overlay d-flex align-items-center justify-content-between"
+          >
+            <div>
+              <p class="card-text font-size-ss mb-0">JAPAN</p>
+              <h3 class="card-title h4 mb-0">Kyoto</h3>
+            </div>
+            <span class="material-icons"> keyboard_arrow_down </span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="col-lg-4 col-md-6 mb-3">
+      <a href="#">
+        <div class="card text-white positon-relative bg-gradient">
+          <div
+            style="
+              background-image: url('./assets/images/Reykjavic.jpg');
+              height: 78px;
+            "
+            class="bg-center"
+          ></div>
+          <div
+            class="card-img-overlay d-flex align-items-center justify-content-between"
+          >
+            <div>
+              <p class="ccard-text font-size-ss mb-0">ICELAND</p>
+              <h3 class="card-title h4 mb-0">Reykjavík</h3>
+            </div>
+            <span class="material-icons"> keyboard_arrow_down </span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="col-lg-4 col-md-6 mb-3">
+      <a href="#">
+        <div class="card text-white positon-relative bg-gradient">
+          <div
+            style="
+              background-image: url('./assets/images/Paris.jpg');
+              height: 78px;
+            "
+            class="bg-center"
+          ></div>
+          <div
+            class="card-img-overlay d-flex align-items-center justify-content-between"
+          >
+            <div>
+              <p class="card-text font-size-ss mb-0">FRANCE</p>
+              <h3 class="card-title h4 mb-0">Paris</h3>
+            </div>
+            <span class="material-icons"> keyboard_arrow_down </span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="col-lg-4 col-md-6 mb-3">
+      <a href="#">
+        <div class="card text-white positon-relative bg-gradient">
+          <div
+            style="
+              background-image: url('./assets/images/Roman.jpg');
+              height: 78px;
+            "
+            class="bg-center"
+          ></div>
+          <div
+            class="card-img-overlay d-flex align-items-center justify-content-between"
+          >
+            <div>
+              <p class="card-text font-size-ss mb-0">Roma</p>
+              <h3 class="card-title h4 mb-0">ITLAY</h3>
+            </div>
+            <span class="material-icons"> keyboard_arrow_down </span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="col-lg-4 col-md-6 mb-3">
+      <a href="#">
+        <div class="card text-white positon-relative bg-gradient">
+          <div
+            style="
+              background-image: url('./assets/images/Bangkok.jpg');
+              height: 78px;
+            "
+            class="bg-center"
+          ></div>
+          <div
+            class="card-img-overlay d-flex align-items-center justify-content-between"
+          >
+            <div>
+              <p class="card-text font-size-ss mb-0">THALAND</p>
+              <h3 class="card-title h4 mb-0">Bangkok</h3>
+            </div>
+            <span class="material-icons"> keyboard_arrow_down </span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="container mt-12 mb-lg-12">
+  <div class="d-flex justify-content-between align-items-center mb-5">
+    <h2 class="title">Get Inspiration</h2>
+    <button type="button" class="btn btn-outline-primary font-size-sm">
+      see more
+    </button>
+  </div>
+  <div class="swiper-container swiper-inspiration">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card h-100">
+          <img
+            class="card-img-top img-cover inspiration__img image-fluid mb-5 mb-md-6"
+            src="./assets/images/italy.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h3 class="card-title h5 h4-md">The fifth most visited country</h3>
+            <p class="card-text text-dark">
+              Italy is the fifth most visited country in the world, with a total
+              of 52.3 million…
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card h-100">
+          <img
+            class="card-img-top img-cover inspiration__img image-fluid mb-5 mb-md-6"
+            src="./assets/images/Thailand.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title h5 h4-md">Visit Thailand for Bangkok</h5>
+            <p class="card-text text-dark">
+              Asian tourists primarily visit Thailand for Bangkok and the
+              historical, natural, and…
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card h-100">
+          <img
+            class="card-img-top img-cover inspiration__img image-fluid mb-5 mb-md-6"
+            src="./assets/images/NewZealand.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title h5 h4-md">Lord of the Rings Tour</h5>
+            <p class="card-text text-dark">
+              The national cuisine has been described as Pacific Rim,
+              incorporating the native Māori…
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="jumbotron jumbotron-fluid mt-12 bg-light">
+  <div class="container">
+    <h2 class="h4 h1-md mb-4 mb-lg-5 text-center title">
+      Subscribe for Exclusive Offer
+    </h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <input
+            type="email"
+            class="form-control form-control-lg border-primary subscribeEmail"
+            placeholder="Your email address"
+            aria-label="Your email address"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <span
+              class="btn btn-input-primary btn-lg group-text bg-primary text-white border-primary"
+              id="basic-addon2"
+            >
+              Subscribe
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
