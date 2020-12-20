@@ -26,9 +26,11 @@
     <link rel="stylesheet" href="./assets/style/all.css" />
   </head>
 
-  <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column vh-100">
     <header class="header">
-      <nav class="navbar navbar-expand-md navbar-light <%- navbarDisplay %>">
+      <nav
+        class="navbar navbar-expand-md navbar-light fixed-top bg-white <%- navbarDisplay %>"
+      >
         <div class="container">
           <button
             class="navbar-toggler"
@@ -42,7 +44,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand logo" href="index.html">ALOHA</a>
-          <a href="login.html" class="nav-link d-md-none"> Login </a>
+          <a href="login.html" class="nav-link d-md-none h6 text-black">
+            Login
+          </a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto align-items-md-center">
               <li class="nav-item dropdown mr-12">
@@ -73,10 +77,36 @@
         </div>
       </nav>
     </header>
-    <main role="main" class="flex-shrink-0"><%- contents %></main>
+    <main role="main" class="flex-shrink-0 mt-18"><%- contents %></main>
 
-    <footer class="footer mt-auto py-5 <%- footerDisplay %>">
-      <div class="container d-lg-flex justify-content-lg-between">
+    <footer class="footer mt-auto <%- footerDisplay %>">
+      <% if (title === "Reserve" || title === "Reserve-success") { %>
+      <div class="container py-4 border-top">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              class="d-flex flex-column-reverse flex-md-row justify-content-between"
+            >
+              <small class="mr-lg-8 text-center text-md-left"
+                >© 2020 ALOHA, Inc. All rights reserved.</small
+              >
+              <ul class="d-flex list-unstyled justify-content-center">
+                <li class="mr-5">
+                  <a href="#" class="text-dark font-size-sm">FAQs</a>
+                </li>
+                <li class="mr-5">
+                  <a href="#" class="text-dark font-size-sm">Terms of use</a>
+                </li>
+                <li>
+                  <a href="#" class="text-dark font-size-sm">Privacy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } else { %>
+      <div class="container d-lg-flex justify-content-lg-between py-5">
         <div
           class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-md-between"
         >
@@ -130,6 +160,7 @@
           </div>
         </div>
       </div>
+      <% } %>
     </footer>
     <script src="./assets/js/vendors.js"></script>
     <script
