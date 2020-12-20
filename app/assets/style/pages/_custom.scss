@@ -27,3 +27,38 @@
 .inspiration__img {
   height: 263px;
 }
+
+.roomDetail {
+  &__img {
+    &-lg {
+      height: 100%;
+      @include media-breakpoint-up(md) {
+        height: 268px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 434px;
+      }
+    }
+    &-md {
+      height: 100%;
+      @include media-breakpoint-up(md) {
+        height: 132px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 213px;
+      }
+    }
+    &-sm {
+      height: 100%;
+      @include media-breakpoint-up(md) {
+        height: 93px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 151px;
+      }
+    }
+    &-carousel {
+      height: 247px;
+    }
+  }
+}
