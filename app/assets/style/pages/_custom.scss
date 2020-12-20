@@ -1,0 +1,29 @@
+.logo {
+  background: url('../images/logo-aloha.svg') center no-repeat;
+  display: block;
+  width: 121px;
+  height: 55px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-size: contain;
+}
+
+.search {
+  margin-top: -52px;
+  &__item {
+    &-bg {
+      @include media-breakpoint-up(md) {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.top__img {
+  height: 175px;
+}
+
+.inspiration__img {
+  height: 263px;
+}

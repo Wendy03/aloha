@@ -2,3 +2,12 @@
 @import './helpers/variables';
 @import '../../../node_modules/bootstrap/scss/mixins';
 @import '../../../node_modules/bootstrap/scss/bootstrap';
+
+@import './utilities/typography';
+
+@import './components/carousel';
+@import './components/swiper';
+
+@import './config/base';
+
+@import './pages/custom';
