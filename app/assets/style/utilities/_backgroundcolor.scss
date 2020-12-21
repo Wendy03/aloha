@@ -1,0 +1,15 @@
+@mixin theme-colors($grid-breakpoints: null) {
+  @each $key, $value in $theme-colors {
+    .bg-#{$key}#{$grid-breakpoints} {
+      background: $value !important;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  @include theme-colors(-md);
+}
+
+@include media-breakpoint-up(lg) {
+  @include theme-colors(-lg);
+}
