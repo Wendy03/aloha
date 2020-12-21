@@ -44,9 +44,19 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand logo" href="index.html">ALOHA</a>
+          <% if (title === "Member") { %>
+          <img
+            src="./assets/images/profile.jpg"
+            alt=""
+            class="rounded-circle img-cover border border-primary mr-2"
+            style="height: 24px; width: 24px"
+          />
+          <% } else { %>
           <a href="login.html" class="nav-link d-md-none h6 text-black">
             Login
           </a>
+          <% } %>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto align-items-md-center">
               <li class="nav-item dropdown mr-12">
@@ -66,12 +76,38 @@
                   <a class="dropdown-item" href="#">English</a>
                 </div>
               </li>
+              <% if (title === "Member") { %>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="profileDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="./assets/images/profile.jpg"
+                    alt=""
+                    class="rounded-circle img-cover border border-primary mr-2"
+                    style="height: 24px; width: 24px"
+                  />
+                  David Lin
+                  <span class="material-icons"> arrow_drop_down </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                  <a class="dropdown-item" href="#">My bookings</a>
+                </div>
+              </li>
+              <% } else { %>
               <li class="nav-item mr-12">
                 <a class="nav-link" href="#">Sign up</a>
               </li>
               <li class="nav-itemd-none d-md-block">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="login.html">Login</a>
               </li>
+              <% } %>
             </ul>
           </div>
         </div>
